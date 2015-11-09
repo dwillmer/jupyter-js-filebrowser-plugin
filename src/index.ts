@@ -2,12 +2,14 @@
 // Distributed under the terms of the Modified BSD License.
 'use strict';
 
-var MENU = [
-  {
-    location: ["New", "File Browser"],
-    command: "jupyter.new.filebrowser"
-  }
-]
+var MENU = {
+  items: [
+    {
+      location: ["New", "File Browser"],
+      command: "jupyter.new.filebrowser"
+    }
+  ]
+};
 
 export
 function menuLoader(extension: any) {

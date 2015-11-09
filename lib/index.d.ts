@@ -1,4 +1,6 @@
 export declare function menuLoader(extension: any): Promise<{
-    location: string[];
-    command: string;
-}[]>;
+    items: {
+        location: string[];
+        command: string;
+    }[];
+}>;
