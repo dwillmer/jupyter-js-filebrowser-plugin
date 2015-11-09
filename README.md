@@ -1,7 +1,7 @@
 Jupyter JS Filebrowser Plugin
 =============================
 
-Plugin Providing a filebrowser plugin for the Jupyter project.
+Plugin Providing a filebrowser for the Jupyter project.
 
 [API Docs](http://jupyter.github.io/jupyter-js-filebrowser-plugin/)
 

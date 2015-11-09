@@ -46,6 +46,14 @@
     "notebook",
     "plugin"
   ],
+  "phosphor-plugin": {
+    "extensions": [
+      {
+        "point": "menus:main",
+        "loader": "menuLoader"
+      }
+    ]
+  },
   "files": [
     "lib/*.js",
     "lib/*.d.ts"
