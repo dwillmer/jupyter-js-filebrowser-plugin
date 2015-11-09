@@ -42,7 +42,7 @@
   },
   "keywords": [
     "jupyter",
-    "services",
+    "filebrowser",
     "notebook",
     "plugin"
   ],
@@ -50,13 +50,6 @@
     "lib/*.js",
     "lib/*.d.ts"
   ],
-  "phosphor-plugin": {
-    "extensions": [
-      {
-        "point": "ui:items",
-      }
-    ]
-  },
   "author": "Project Jupyter",
   "license": "BSD-3-Clause",
   "bugs": {
