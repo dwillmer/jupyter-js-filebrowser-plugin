@@ -19,11 +19,17 @@ var MENU = {
   ]
 };
 
+/**
+ * Plugin loader function for the menu.
+ */
 export
 function menuLoader(extension: any) {
   return Promise.resolve(MENU);
 }
 
+/**
+ * Plugin loader function for the UI items.
+ */
 export
 function uiLoader(extension: any): Promise<any> {
   var ui = {
