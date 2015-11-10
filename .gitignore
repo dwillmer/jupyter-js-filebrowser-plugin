@@ -10,3 +10,4 @@ dist
 build
 docs
 example/*.js
+lib/
