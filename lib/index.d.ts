@@ -4,3 +4,4 @@ export declare function menuLoader(extension: any): Promise<{
         command: string;
     }[];
 }>;
+export declare function uiLoader(extension: any): Promise<any>;

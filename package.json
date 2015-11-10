@@ -5,9 +5,10 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "jupyter-js-services": "^0.0.1",
+    "jupyter-js-filebrowser": "git+https://github.com/dwillmer/jupyter-js-filebrowser.git#initial",
     "phosphor-disposable": "^1.0.4",
-    "phosphor-plugins": "git+https://github.com/dwillmer/phosphor-plugins.git"
+    "phosphor-plugins": "git+https://github.com/dwillmer/phosphor-plugins.git",
+    "phosphor-tabs": "^0.9.8"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
@@ -51,6 +52,10 @@
       {
         "point": "menus:main",
         "loader": "menuLoader"
+      },
+      {
+        "point": "ui:main",
+        "loader": "uiLoader"
       }
     ]
   },
