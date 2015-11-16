@@ -7,8 +7,13 @@ import {
 } from 'jupyter-js-filebrowser';
 
 import {
+  IMenuExtension, IUIExtension
+} from 'phosphide';
+
+import {
   Tab
 } from 'phosphor-tabs';
+
 
 var MENU = {
   items: [
@@ -19,19 +24,21 @@ var MENU = {
   ]
 };
 
+
 /**
  * Plugin loader function for the menu.
  */
 export
-function menuLoader(extension: any) {
+function menuLoader(): Promise<IMenuExtension> {
   return Promise.resolve(MENU);
 }
+
 
 /**
  * Plugin loader function for the UI items.
  */
 export
-function uiLoader(extension: any): Promise<any> {
+function uiLoader(): Promise<IUIExtension> {
   var ui = {
     items: [new FileBrowser("http://localhost:8765", './')],
     tabs: [new Tab('FileBrowser')]
