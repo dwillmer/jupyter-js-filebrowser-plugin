@@ -48,10 +48,12 @@
   "phosphor-plugin": {
     "extensions": [
       {
+        "id": "jupyter-js-filebrowser-plugin:menu-extension",
         "point": "menus:main",
         "loader": "menuLoader"
       },
       {
+        "id": "jupyter-js-filebrowser-plugin:ui-extension",
         "point": "ui:main",
         "loader": "uiLoader"
       }
