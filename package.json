@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "jupyter-js-filebrowser": "git://github.com/jupyter/jupyter-js-filebrowser.git",
+    "jupyter-js-filebrowser": "dwillmer/jupyter-js-filebrowser.git#initial",
     "phosphor-tabs": "^1.0.0-beta.3"
   },
   "devDependencies": {
