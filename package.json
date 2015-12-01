@@ -6,7 +6,7 @@
   "typings": "lib/index.d.ts",
   "dependencies": {
     "jupyter-js-filebrowser": "git://github.com/jupyter/jupyter-js-filebrowser.git",
-    "phosphor-tabs": "^0.9.8"
+    "phosphor-tabs": "^1.0.0-beta.3"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",

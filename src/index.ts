@@ -6,9 +6,9 @@ import {
   FileBrowser
 } from 'jupyter-js-filebrowser';
 
-import {
-  Tab
-} from 'phosphor-tabs';
+// import {
+//   Tab
+// } from 'phosphor-tabs';
 
 var MENU = {
   items: [
@@ -32,9 +32,11 @@ function menuLoader(extension: any) {
  */
 export
 function uiLoader(extension: any): Promise<any> {
+  var fb = new FileBrowser("http://localhost:8765", './');
+  fb.title.text = 'Filebrowser';
+  fb.title.closable = true;
   var ui = {
-    items: [new FileBrowser("http://localhost:8765", './')],
-    tabs: [new Tab('FileBrowser')]
+    items: [fb]
   };
   return Promise.resolve(ui);
 }
