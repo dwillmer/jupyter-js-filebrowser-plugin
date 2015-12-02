@@ -23,7 +23,7 @@ var MENU = {
  * Plugin loader function for the menu.
  */
 export
-function menuLoader(extension: any) {
+function createMenuContribution(extension: any): any {
   console.log("FB PLUGIN - menuLoader called");
   return Promise.resolve(MENU);
 }
@@ -32,13 +32,15 @@ function menuLoader(extension: any) {
  * Plugin loader function for the UI items.
  */
 export
-function uiLoader(extension: any): Promise<any> {
+function createUIContribution(extension: any): any {
   console.log("FB PLUGIN - uiLoader called");
   var fb = new FileBrowser("http://localhost:8765", './');
   fb.title.text = 'Filebrowser';
   fb.title.closable = true;
   var ui = {
-    items: [fb]
+    item: [fb],
+    isDisposed: false,
+    dispose: () => {}
   };
-  return Promise.resolve(ui);
+  return ui;
 }

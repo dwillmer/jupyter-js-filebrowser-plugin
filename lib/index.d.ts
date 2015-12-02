@@ -1,13 +1,8 @@
 /**
  * Plugin loader function for the menu.
  */
-export declare function menuLoader(extension: any): Promise<{
-    items: {
-        location: string[];
-        command: string;
-    }[];
-}>;
+export declare function createMenuContribution(extension: any): any;
 /**
  * Plugin loader function for the UI items.
  */
-export declare function uiLoader(extension: any): Promise<any>;
+export declare function createUIContribution(extension: any): any;

@@ -51,13 +51,13 @@
         "main": "lib/index.js",
         "id": "jupyter-js-filebrowser-plugin:menu-extension",
         "point": "menus:main",
-        "loader": "menuLoader"
+        "factory": "createMenuContribution"
       },
       {
         "main": "lib/index.js",
         "id": "jupyter-js-filebrowser-plugin:ui-extension",
         "point": "ui:main",
-        "loader": "uiLoader"
+        "factory": "createUIContribution"
       }
     ]
   },
