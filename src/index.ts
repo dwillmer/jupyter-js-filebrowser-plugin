@@ -24,6 +24,7 @@ var MENU = {
  */
 export
 function menuLoader(extension: any) {
+  console.log("FB PLUGIN - menuLoader called");
   return Promise.resolve(MENU);
 }
 
@@ -32,6 +33,7 @@ function menuLoader(extension: any) {
  */
 export
 function uiLoader(extension: any): Promise<any> {
+  console.log("FB PLUGIN - uiLoader called");
   var fb = new FileBrowser("http://localhost:8765", './');
   fb.title.text = 'Filebrowser';
   fb.title.closable = true;
