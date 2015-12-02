@@ -10,14 +10,13 @@ import {
 //   Tab
 // } from 'phosphor-tabs';
 
-var MENU = {
-  items: [
-    {
-      location: ["New", "File Browser"],
-      command: "jupyter.new.filebrowser"
-    }
-  ]
-};
+var MENU = [
+  {
+    location: ["New", "File Browser"],
+    command: "jupyter.new.filebrowser"
+  }
+];
+
 
 /**
  * Plugin loader function for the menu.
