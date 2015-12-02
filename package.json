@@ -49,6 +49,12 @@
     "extensions": [
       {
         "main": "lib/index.js",
+        "id": "jupyter-js-filebrowser-plugin:menu-extension",
+        "point": "menus:main",
+        "factory": "createMenuContribution"
+      },
+      {
+        "main": "lib/index.js",
         "id": "jupyter-js-filebrowser-plugin:ui-extension",
         "point": "ui:main",
         "factory": "createUIContribution"
