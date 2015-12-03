@@ -14,12 +14,10 @@ import {
 //   Tab
 // } from 'phosphor-tabs';
 
-var MENU = [
-  {
-    location: ["New", "File Browser"],
-    command: "jupyter.new.filebrowser"
-  }
-];
+var MENU = {
+  location: ["New", "File Browser"],
+  command: "jupyter.new.filebrowser"
+};
 
 
 let contribProto: IContribution = {
@@ -51,7 +49,6 @@ function createUIContribution(): IContribution {
   let contrib = Object.create(contribProto);
   var fb = new FileBrowser("http://localhost:8765", './');
   fb.title.text = 'Filebrowser';
-  fb.title.closable = true;
-  contrib.item = [fb];
+  contrib.item = fb;
   return contrib;
 }
