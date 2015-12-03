@@ -23,7 +23,6 @@ var MENU = [
  */
 export
 function createMenuContribution(extension: any): any {
-  console.log("FB PLUGIN - menuLoader called");
   return {
     item: MENU,
     isDisposed: false,
