@@ -3,6 +3,10 @@
 'use strict';
 
 import {
+  IContribution
+} from 'phosphor-plugins';
+
+import {
   FileBrowser
 } from 'jupyter-js-filebrowser';
 
@@ -18,31 +22,36 @@ var MENU = [
 ];
 
 
+let contribProto: IContribution = {
+  item: null,
+  isDisposed: false,
+  dispose: function() {
+    this.isDisposed = true;
+    this.item = null;
+  },
+};
+
+
 /**
  * Plugin loader function for the menu.
  */
 export
-function createMenuContribution(extension: any): any {
-  return {
-    item: MENU,
-    isDisposed: false,
-    dispose: () => {}
-  };
+function createMenuContribution(): IContribution {
+  let contrib = Object.create(contribProto);
+  contrib.item = MENU;
+  return contrib;
 }
 
 /**
  * Plugin loader function for the UI items.
  */
 export
-function createUIContribution(extension: any): any {
+function createUIContribution(): IContribution {
   console.log("FB PLUGIN - uiLoader called");
+  let contrib = Object.create(contribProto);
   var fb = new FileBrowser("http://localhost:8765", './');
   fb.title.text = 'Filebrowser';
   fb.title.closable = true;
-  var ui = {
-    item: [fb],
-    isDisposed: false,
-    dispose: () => {}
-  };
-  return ui;
+  contrib.item = [fb];
+  return contrib;
 }
