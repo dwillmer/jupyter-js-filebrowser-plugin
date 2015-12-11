@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "dependencies": {
+    "jupyter-js-services": "^0.2.2",
     "jupyter-js-filebrowser": "jupyter/jupyter-js-filebrowser",
     "phosphor-plugins": "^0.4.0"
   },
@@ -12,7 +13,7 @@
     "expect.js": "^0.3.1",
     "istanbul": "^0.3.18",
     "mocha": "^2.2.5",
-    "phosphide": "phosphorjs/phosphide",
+    "phosphide": "^0.0.2",
     "rimraf": "^2.4.2",
     "typedoc": "^0.3.11",
     "typescript": "^1.6.2"

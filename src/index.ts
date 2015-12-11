@@ -7,8 +7,12 @@ import {
 } from 'phosphor-plugins';
 
 import {
-  FileBrowser
+  FileBrowser, FileBrowserViewModel
 } from 'jupyter-js-filebrowser';
+
+import {
+  Contents
+} from 'jupyter-js-services';
 
 
 var MENU = {
@@ -48,7 +52,10 @@ function createMenuContribution(): IContribution {
 export
 function createUIContribution(): IContribution {
   let contrib = Object.create(contribProto);
-  var fb = new FileBrowser("http://localhost:8765", './');
+  let baseUrl = "http://localhost:8888"
+  let contents = new Contents(baseUrl);
+  let fbModel = new FileBrowserViewModel('', contents);
+  var fb = new FileBrowser(fbModel);
   fb.title.text = 'Filebrowser';
   contrib.item = fb;
   return contrib;
